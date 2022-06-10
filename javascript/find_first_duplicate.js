@@ -1,5 +1,25 @@
 function findFirstDuplicate(arr) {
-  // type your code here
+  const alreadySeen = []
+  let repeated = null
+
+  for (let i = 0; i < arr.length; i++){
+    if(alreadySeen.includes(arr[i])) return arr[i]
+    else alreadySeen.push(arr[i])
+  }
+  return -1
+
+  // arr.forEach(element => {
+  //   if (!alreadySeen.includes(element)){
+  //   }
+  //   else if(!repeated) {
+  //     repeated = element
+  //   }
+  // });
+
+  // if (repeated){
+  //   return repeated
+  // }
+  
 }
 
 if (require.main === module) {
